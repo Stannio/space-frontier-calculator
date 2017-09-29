@@ -9,13 +9,9 @@
   "dependencies": {
     "gh-pages": "^1.0.0",
     "material-ui": "next",
-    "pre-push": "^0.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "pre-push": [
-    "deploy"
-  ],
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

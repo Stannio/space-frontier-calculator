@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+import { purple, yellow, red } from 'material-ui/colors'
+import Main from './Main'
+import Topbar from './Topbar'
+
+const theme = createMuiTheme({
+  primary: purple,
+  accent: yellow,
+  error: red
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Space Frontier Calculator</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <div>
+          <Topbar />
+          <Main />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
