@@ -1,0 +1,27 @@
+{
+  "name": "space-frontier-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://Stannio.github.io/space-frontier-calculator",
+  "devDependencies": {
+    "react-scripts": "1.0.14"
+  },
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "material-ui": "next",
+    "pre-push": "^0.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "pre-push": [
+    "deploy"
+  ],
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
